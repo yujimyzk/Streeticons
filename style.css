@@ -9,34 +9,73 @@ body, html {
 
 .hero {
   background: url('background.jpg') no-repeat center center/cover;
-  height: 100vh;
+  height: 100%;
   position: relative;
 }
 
 .overlay {
   background-color: rgba(0,0,0,0.6);
-  height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
+  padding: 20px;
 }
 
 h1 {
-  font-size: 4em;
-  margin-bottom: 40px;
+  font-size: 3em;
+  margin: 20px 0;
 }
 
-.brands a, .social a {
-  display: block;
-  margin: 10px;
+.brands {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.item-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 350px;
+  text-align: center;
+}
+
+.item-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.item-card .title {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+.item-card .desc {
+  font-size: 0.9em;
+  color: #ccc;
+}
+
+.brands a {
+  color: white;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.brands a:hover {
+  color: #f00;
+}
+
+.social a {
+  margin: 15px;
   font-size: 1.2em;
   color: white;
   text-decoration: none;
-  transition: 0.3s;
-}
-
-.brands a:hover, .social a:hover {
-  color: #f00;
 }
